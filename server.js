@@ -72,4 +72,9 @@ app.get('/predictions/:coin', async (req, res) => {
 
 });
 
+
+app.get('/', (req, res) => {
+  res.status(404).send({error: 'Page not found'});
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
