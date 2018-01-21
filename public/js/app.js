@@ -13,7 +13,7 @@ var updateCoin = (i) => {
           backgroundColor: `rgb(256, 0, 0, ${1 - data.chances})`
       }, 1000);
     }
-    setTimeout(updateCoin((i + 1) % 12), 5000);
+    setTimeout(function () { updateCoin((i + 1) % 12) }, 5000);
   }).fail(() => {
     setTimeout(updateCoin(i, 10000));
   });
