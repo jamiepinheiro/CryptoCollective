@@ -8,6 +8,6 @@ https://crypto-collective.herokuapp.com/
 
 https://devpost.com/software/crypto-collective
 
-![alt text](https://raw.githubusercontent.com/ethanalee/public/img/about.PNG)
+![alt text](https://github.com/ethanalee/public/img/about.PNG)
 
-![alt text](https://raw.githubusercontent.com/ethanalee/public/img/info.PNG)
+![alt text](https://github.com/ethanalee/public/img/info.PNG)
