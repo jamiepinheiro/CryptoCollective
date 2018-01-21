@@ -1,4 +1,4 @@
-# CryptoCollective-1
+# CryptoCollective
 
 Crypto Collective aggregates tweets accessed through the Twitter API. It then processes these tweets using Microsoft Azure's text analytics service which returns numerical user sentiment data. This data was then formatted into a user friendly interface and displayed on our website. This will undoubtedly aid users in their cryptocurrency investments.
 
