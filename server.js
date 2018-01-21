@@ -6,6 +6,8 @@ const port = process.env.PORT || 5000;
 
 var app = express();
 
+app.use(express.static('public'));
+
 var client = new Twitter({
   consumer_key: 'EPe6K550jqwm123eKhzCkaviG',
   consumer_secret: 'iulT1zIm2Lnk1czoHQgMdmAMoVRrAyd6KuXm8iYDxErKGkFe1b',
@@ -17,7 +19,13 @@ app.get('/predictions/:coin', async (req, res) => {
 
   var coin = req.params.coin;
 
-  var tweets = await client.get('search/tweets', {q: coin, count: 90});
+  var tweets = null;
+  try {
+    tweets = await client.get('search/tweets', {q: coin, count: 90});
+  } catch (e) {
+    console.log(e);
+  }
+
   var documents = tweets.statuses
   .map((status, i) => {
     return {
@@ -25,7 +33,6 @@ app.get('/predictions/:coin', async (req, res) => {
       id: i + 1,
       text: status.text,
     }
-
   });
 
   var body = JSON.stringify({documents: documents});
@@ -36,16 +43,20 @@ app.get('/predictions/:coin', async (req, res) => {
       body += d;
     });
     response.on ('end', function () {
-      var data = JSON.parse(body);
 
-      var sum = 0;
+      try {
+        var data = JSON.parse(body);
+        var sum = 0;
+        data.documents.forEach((doc) => {
+          sum += doc.score;
+        });
 
-      data.documents.forEach((doc) => {
-        sum += doc.score;
-      });
+        var chances = sum / data.documents.length;
+        res.send({chances});
 
-      var chances = sum / data.documents.length;
-      res.send({chances});
+      }catch(e) {
+        res.status(400).send(e);
+      }
     });
     response.on ('error', function (e) {
       res.status(400).send(e);
