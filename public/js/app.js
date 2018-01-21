@@ -3,7 +3,7 @@ const coins = ['bitcoin', 'ethereum', 'ripple', 'cardano', 'litecoin', 'nem', 'n
 var updateCoin = (i) => {
   $.get('/predictions/' + coins[i], (data) => {
     console.log(data);
-    $(`#${coins[i]}`).text(Math.round(data.chances * 100000)/100000);
+    $(`#${coins[i]}`).text(Math.round(data.chances * 100) + '%');
     if (data.chances > 0.5) {
       $(`#${coins[i]}-card`).animate({
           backgroundColor: `rgb(0, 256, 100, ${data.chances})`
