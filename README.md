@@ -8,6 +8,8 @@ https://crypto-collective.herokuapp.com/
 
 https://devpost.com/software/crypto-collective
 
-![alt text](https://github.com/ethanalee/CryptoCollective-1/tree/master/public/img/about.png)
+![alt tag](https://github.com/ethanalee/CryptoCollective-1/tree/master/public/img/about.png)
 
-![alt text](https://github.com/ethanalee/CryptoCollective-1/tree/master/public/img/info.png)
+![alt tag](https://github.com/ethanalee/CryptoCollective-1/tree/master/public/img/info.png)
+
+![alt tag](https://github.com/adityachugh/WWDC-2015/blob/master/Screenshots/1.png)
