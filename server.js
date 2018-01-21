@@ -9,10 +9,10 @@ var app = express();
 app.use(express.static('public'));
 
 var client = new Twitter({
-  consumer_key: 'EPe6K550jqwm123eKhzCkaviG',
-  consumer_secret: 'iulT1zIm2Lnk1czoHQgMdmAMoVRrAyd6KuXm8iYDxErKGkFe1b',
-  access_token_key: '954548455917137920-TKWp5v477DBTd9hnaVze85iMkVAymRL',
-  access_token_secret: '6weqmBeMqq1cnta5lUvALNSceVfrUNWSODeRQNxUOV1So'
+  consumer_key: '6NEEHw89UHPicD8AxrkcGG1h4',
+  consumer_secret: 'TKRDjGqt8fj8P0mhESLlklLAjYTwZPyWzZ3u2BN0P9mVhBtOe4',
+  access_token_key: '952431139741876224-O1XXi9YwADUm7AiGUxqbGrZ4aJfzHby',
+  access_token_secret: 'kUsQmaUx7uLS0CLFkW1ZDbtXYcCHRQw7mlWf9RLRgV92y'
 });
 
 app.get('/predictions/:coin', async (req, res) => {
@@ -21,7 +21,7 @@ app.get('/predictions/:coin', async (req, res) => {
 
   var tweets = null;
   try {
-    tweets = await client.get('search/tweets', {q: coin, count: 90});
+    tweets = await client.get('search/tweets', {q: coin, count: 30});
   } catch (e) {
     console.log(e);
   }
