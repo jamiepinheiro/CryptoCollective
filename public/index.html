@@ -13,8 +13,13 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+
+    <!-- Custom styles for tshis template -->
     <link href="css/heroic-features.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
 
   </head>
 
@@ -30,13 +35,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Home
+
+              <a class="nav-link" href="#">About
+
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+
+              <a class="nav-link" href="#info">Live Figures</a>
             </li>
+
+
           </ul>
         </div>
       </div>
@@ -47,24 +57,31 @@
 
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4">
-        <h1 class="display-3">Crypto Collective Services</h1>
-       <p class="lead">
-         This hack predicts cryptocurrency trends based on live tweets on Twitter.
-         This data is then processed in the <b>Microsoft Azure Text Analytics API</b> which evalutes
-         users' sentiment concerning cryptocurrency prospects. This in turn is converted
-         to percentages which determines if the tweet is positive or negative in tone.
-         <b><i>This data advises users in real time about the state of different cryptocurrencies.</b></i></p>
+        <h1 class="display-3 offset-lg-2">Crypto Collective Services</h1>
+        <img class="col-lg-8 offset-lg-2 col-md-6 mb-4" src="img/CryptoCollectorGraphic.png">
+        <p class="lead">
+
+          This hack predicts cryptocurrency trends based on live tweets on Twitter.
+          This data is then processed <b>Micrsoft Azure Text Analytics API</b> which evalutes
+          users' sentiment concerning cryptocurrency prospects. This in turn is converted
+          to percentage numbers which determines if the tweet is positive or negative in tone.
+          <b><i>This data advises users in real time about the state of different cyrptocurrencies.</b></i></p>
+
+        <!-- <a href="#info" class="btn btn-primary btn-lg">Call to action!</a> -->
+
       </header>
 
       <!-- Page Features -->
+      <a name="info"></a>
       <div class="row text-center">
+
 
         <div class="col-lg-2 col-md-6 mb-4">
           <div id="bitcoin-card" class="card p-1">
             <img class="card-img-top" src="img/bitcoin.png" alt="">
             <div class="card-body">
               <h4 class="card-title">Bitcoin</h4>
-              <p id="bitcoin" class="card-text"></p>
+              <p id="bitcoin" class="card-text">0</p>
             </div>
           </div>
         </div>
@@ -74,7 +91,7 @@
             <img class="card-img-top" src="img/ethereum.png" alt="">
             <div class="card-body">
               <h4 class="card-title">Ethereum</h4>
-              <p id="ethereum" class="card-text"></p>
+              <p id="ethereum" class="card-text">0</p>
             </div>
           </div>
         </div>
@@ -84,7 +101,8 @@
             <img class="card-img-top" src="img/ripple.png" alt="">
             <div class="card-body">
               <h4 class="card-title">Ripple</h4>
-              <p id="ripple" class="card-text"></p>
+              <p id="ripple" class="card-text">0</p>
+
             </div>
           </div>
         </div>
@@ -94,7 +112,7 @@
             <img class="card-img-top" src="img/cardano.png" alt="">
             <div class="card-body">
               <h4 class="card-title">Cardano</h4>
-              <p id="cardano" class="card-text"></p>
+              <p id="cardano" class="card-text">0</p>
             </div>
           </div>
         </div>
@@ -104,7 +122,7 @@
             <img class="card-img-top" src="img/litecoin.png" alt="">
             <div class="card-body">
               <h4 class="card-title">Litecoin</h4>
-              <p id="litecoin" class="card-text"></p>
+              <p id="litecoin" class="card-text">0</p>
             </div>
           </div>
         </div>
@@ -114,7 +132,7 @@
             <img class="card-img-top" src="img/nem.png" alt="">
             <div class="card-body">
               <h4 class="card-title">NEM</h4>
-              <p id="nem" class="card-text"></p>
+              <p id="nem" class="card-text">0</p>
             </div>
           </div>
         </div>
@@ -129,17 +147,19 @@
             <img class="card-img-top" src="img/neo.png" alt="">
             <div class="card-body">
               <h4 class="card-title">NEO</h4>
-              <p id="neo" class="card-text"></p>
+              <p id="neo" class="card-text">0</p>
+
             </div>
           </div>
         </div>
+
 
         <div class="col-lg-2 col-md-6 mb-4">
           <div id="stellar-card" class="card p-1">
             <img class="card-img-top" src="img/stellar.png" alt="">
             <div class="card-body">
               <h4 class="card-title">Stellar</h4>
-              <p id="stellar" class="card-text"></p>
+              <p id="stellar" class="card-text">0</p>
             </div>
           </div>
         </div>
@@ -149,17 +169,19 @@
             <img class="card-img-top" src="img/eos.png" alt="">
             <div class="card-body">
               <h4 class="card-title">EOS</h4>
-              <p id="eos" class="card-text"></p>
+              <p id="eos" class="card-text">0</p>
+
             </div>
           </div>
         </div>
+
 
         <div class="col-lg-2 col-md-6 mb-4">
           <div id="iota-card" class="card p-1">
             <img class="card-img-top" src="img/iota.png" alt="">
             <div class="card-body">
               <h4 class="card-title">IOTA</h4>
-              <p id="iota" class="card-text"></p>
+              <p id="iota" class="card-text">0</p>
             </div>
           </div>
         </div>
@@ -169,25 +191,29 @@
             <img class="card-img-top" src="img/dash.png" alt="">
             <div class="card-body">
               <h4 class="card-title">DASH</h4>
-              <p id="dash" class="card-text"></p>
+              <p id="dash" class="card-text">0</p>
+
             </div>
           </div>
         </div>
+
 
         <div class="col-lg-2 col-md-6 mb-4">
           <div id="monero-card" class="card p-1">
             <img class="card-img-top" src="img/monero.png" alt="">
             <div class="card-body">
               <h4 class="card-title">Monero</h4>
-              <p id="monero" class="card-text"></p>
+              <p id="monero" class="card-text">0</p>
             </div>
           </div>
         </div>
+
       </div>
       <!-- /.row -->
 
     </div>
     <!-- /.container -->
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -195,6 +221,7 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <script src="js/app.js"></script>
+
 
   </body>
 
